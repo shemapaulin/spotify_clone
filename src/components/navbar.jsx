@@ -1,7 +1,8 @@
 import React from 'react';
-
+import Mobonav from './mobonav';
 const Navbar = () => {
   return (
+    <>
     <div className="flex items-center justify-between px-6 py-4  shadow-md">
       {/* Left Section: Logo */}
       <div className="flex items-center space-x-2">
@@ -44,6 +45,9 @@ const Navbar = () => {
         </button>
       </div>
     </div>
+
+    
+    </>
   );
 };
 
