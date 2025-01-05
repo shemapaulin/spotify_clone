@@ -16,7 +16,7 @@ const Sidebar = () => {
         />
       </div>
 
-      {/* Scrollable Content */}
+      
       <div className="flex-1 overflow-hidden hover:overflow-y-auto space-y-6 pb-4">
         {/* Card 1 */}
         <div className="bg-gradient-to-r from-[#1e1e20] to-[#2d2d31] w-full h-auto p-6 rounded-lg shadow-md flex flex-col items-start justify-between space-y-4 hover:shadow-lg transition-shadow">
