@@ -2,7 +2,7 @@ import React from 'react';
 
 const Sidebar = () => {
   return (
-    <div className="w-[400px] h-screen bg-[#27272a] p-5 rounded-lg shadow-lg flex flex-col">
+    <div className="w-[400px] h-screen bg-[#27272a] p-5 rounded-lg shadow-lg flex flex-col hidden md:block">
       {/* Header Section */}
       <div className="flex items-center justify-between py-10">
         <span className="flex items-center space-x-3">

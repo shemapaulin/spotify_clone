@@ -3,7 +3,7 @@ import Mobonav from './mobonav';
 const Navbar = () => {
   return (
     <>
-    <div className="flex items-center justify-between px-6 py-4  shadow-md">
+    <div className="flex items-center justify-between  shadow-md">
       {/* Left Section: Logo */}
       <div className="flex items-center space-x-2">
         <img src='/spotify.svg' alt="Spotify Logo" className="w-11 h-11"/>
@@ -37,10 +37,10 @@ const Navbar = () => {
 
       {/* Right Section: Sign In and Sign Up */}
       <div className="flex items-center space-x-4">
-        <button className="px-4 py-2 text-white font-bold text-1xl rounded hover:bg-gray-300 transition">
+        <button className="px-6 py-2 text-gray-400 font-bold text-xl rounded hover:bg-gray-300 transition">
           Sign Up
         </button>
-        <button className="px-4 py-2 bg-white text-black text-1xl font-bold rounded-full hover:bg-blue-600 transition">
+        <button className="px-10 py-4 bg-white text-black text-xl font-bold rounded-full hover:bg-blue-600 transition">
           log in
         </button>
       </div>

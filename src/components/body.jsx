@@ -127,39 +127,39 @@ const Body = () => {
       </div>
 
       {/* Artists List */}
-      <div className="flex flex-row gap-10 items-center justify-start mt-5 flex-wrap">
-        {artists.slice(0, showAllArtists ? artists.length : 6).map((artist, index) => (
-          <div
-            key={index}
-            className="group relative flex flex-col items-center rounded-lg overflow-hidden transition-all"
-          >
-            <div className="absolute -inset-6 bg-gradient-to-r from-[#1e1e20] to-[#2d2d31] opacity-0 group-hover:opacity-100 transition-opacity z-0 rounded-lg"></div>
+      <div className="flex flex-row gap-4 items-center justify-start mt-5 overflow-x-auto">
+  {artists.slice(0, showAllArtists ? artists.length : 6).map((artist, index) => (
+    <div
+      key={index}
+      className="group relative flex-shrink-0 flex flex-col items-center rounded-lg overflow-hidden transition-all"
+    >
+      {/* Background Hover Effect */}
+      <div className="absolute -inset-6 bg-gradient-to-r from-[#1e1e20] to-[#2d2d31] opacity-0 group-hover:opacity-100 transition-opacity z-0 rounded-lg"></div>
 
-            <div className="relative z-10 flex flex-col items-center">
-              <div className="relative w-40 h-40">
-                <img
-                  src={artist.image}
-                  alt={artist.name}
-                  className="w-full h-full rounded-full object-cover transition-transform"
-                />
-
-                <div className="absolute bottom-2 right-2 w-12 h-12 bg-green-500 rounded-full flex items-center justify-center z-20 opacity-0 group-hover:opacity-100 transition-opacity">
-                  <img src="/play.svg" alt="Play Icon" className="w-6 h-6" />
-                </div>
-              </div>
-
-              <div className="mt-3 text-center flex flex-col items-start">
-                <h1 className="text-white text-2xl font-semibold">
-                  {artist.name}
-                </h1>
-                <p className="text-gray-400 text-lg font-medium">
-                  {artist.role}
-                </p>
-              </div>
-            </div>
+      <div className="relative z-10 flex flex-col items-center">
+        {/* Artist Image */}
+        <div className="relative w-40 h-40">
+          <img
+            src={artist.image}
+            alt={artist.name}
+            className="w-full h-full object-cover transition-transform rounded-lg sm:rounded-full"
+          />
+          <div className="absolute bottom-2 right-2 w-12 h-12 bg-green-500 rounded-full flex items-center justify-center z-20 opacity-0 group-hover:opacity-100 transition-opacity">
+            <img src="/play.svg" alt="Play Icon" className="w-6 h-6" />
           </div>
-        ))}
+        </div>
+
+        {/* Artist Name and Role */}
+        <div className="mt-3 text-center flex flex-col items-start">
+          <h1 className="text-white text-2xl font-semibold">{artist.name}</h1>
+          <p className="text-gray-400 text-lg font-medium">{artist.role}</p>
+        </div>
       </div>
+    </div>
+  ))}
+</div>
+
+
 
       {/* Popular Albums and Singles Section */}
       {!showAllArtists && (
